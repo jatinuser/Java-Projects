@@ -66,4 +66,13 @@ public class StudentService {
         }
     }
 
+    public List<Student> getAllStudents() throws SQLException {
+
+        try {
+            return StudentDAO.findAll();
+        } catch (SQLException e) {
+            throw new RuntimeException(e);
+        }
+
+    }
 }

@@ -12,7 +12,7 @@ import java.util.List;
 
 public class StudentDAO {
 
-    public List<Student> findAll() throws SQLException {
+    public static List<Student> findAll() throws SQLException {
         List<Student> list = new ArrayList<>();
         String sql = "SELECT id, name, age, course, marks FROM students ORDER BY id";
         try (Connection con = DBConnection.getConnection();
